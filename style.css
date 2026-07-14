@@ -1,39 +1,118 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.card {
-    width: 350px;
-    margin: 100px auto;
+body {
+    background: #f4f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
     padding: 30px;
-    background-color: white;
-    border-radius: 15px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 h1 {
-    font-size: 35px;
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 25px;
 }
 
-p {
-    font-size: 18px;
+#taskInput {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #d1d5db;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: 0.3s;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 18px;
+#taskInput:focus {
+    border-color: #2563eb;
+}
+
+#addBtn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+#addBtn:hover {
+    background: #1d4ed8;
+}
+
+#taskList {
+    list-style: none;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9fafb;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid #e5e7eb;
+}
+
+#taskList li:hover {
+    background: #eef4ff;
+}
+
+#taskList button {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 14px;
     border-radius: 8px;
     cursor: pointer;
-    
+    transition: 0.3s;
 }
 
-button:hover {
-    transform: scale(1.1);
+#taskList button:hover {
+    background: #dc2626;
 }
 
-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+.completed {
+    text-decoration: line-through;
+    color: #6b7280;
+    opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #taskInput,
+    #addBtn {
+        font-size: 15px;
+    }
 }
